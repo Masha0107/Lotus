@@ -1,0 +1,254 @@
+/*ОБНУЛЕНИЕ*/
+*{padding: 0;margin:0;border: 0;}/*чистит отступы и границы*/
+*,*:before,*:after{-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;}/*меняет подсчет ширины блока для удобства*/
+:focus,:active{outline: none;}/*убирает линии обводки*/
+a:focus,a:active{outline: none;}/*убирает линии обводки*/
+nav,footer,header,aside{display: block;}/*делает элементы блочными*/
+html,body{height: 100%;width: 100%;font-size: 100%;line-height: 1;font-size: 14px;-ms-text-size-adjust: 100%;-moz-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;}/*уравнивает поведение шрифтов и элементов для разных браузеров*/
+input,button,textarea{font-family: inherit;}/*наследование семейства шрифта*/
+input::-ms-clear{display: none;}/*убирает крестик в инпутах*/
+button{cursor: pointer;}/*курсор-указатель, указывает на ссылку*/
+button::-moz-focus-inner{padding: 0;border: 0;}/*убирает лишние отступы для кнопок*/
+a,a:visited{text-decoration: none;}/*чистит стили маркированных списков*/
+a:hover{text-decoration: none;}/*чистит стили маркированных списков*/
+ul li{list-style: none;}/*чистит стили маркированных списков*/
+img{vertical-align: top;}/*верхний край элемента совмещается с верхним краем самого высокого элемента в линии*/
+h1,h2,h3,h4,h5,h6{font-size: inherit;font-weight: inherit;}/*обнуляет заголовки*/
+
+/*ПОДКЛЮЧЕНИЕ ШРИФТОВ*/
+
+@font-face {
+	font-family: "Montserrat";
+	font-weight: 500;
+	font-style: normal;
+	font-display: swap;
+	src: url("../fonts/Montserrat/Montserrat-Medium.ttf");
+}
+
+@font-face {
+	font-family: "Montserrat";
+	font-weight: 600;
+	font-style: normal;
+	font-display: swap;
+	src: url("../fonts/Montserrat/Montserrat-SemiBold.ttf");
+}
+
+@font-face {
+	font-family: "Playfair Display";
+	font-weight: 700;
+	font-style: normal;
+	font-display: swap;
+	src: url("../fonts/Playfair_Display/PlayfairDisplay-Bold.ttf");
+}
+
+@font-face {
+	font-family: "Raleway";
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+	src: url("../fonts/Raleway/Raleway-Regular.ttf");
+}
+
+@font-face {
+	font-family: "Raleway";
+	font-weight: 500;
+	font-style: normal;
+	font-display: swap;
+	src: url("../fonts/Raleway/Raleway-Medium.ttf");
+}
+
+@font-face {
+	font-family: "Raleway";
+	font-weight: 600;
+	font-style: normal;
+	font-display: swap;
+	src: url("../fonts/Raleway/Raleway-SemiBold.ttf");
+}
+
+@font-face {
+	font-family: "Raleway";
+	font-weight: 700;
+	font-style: normal;
+	font-display: swap;
+	src: url("../fonts/Raleway/Raleway-Bold.ttf");
+}
+
+@font-face {
+	font-family: "Raleway";
+	font-weight: 800;
+	font-style: normal;
+	font-display: swap;
+	src: url("../fonts/Raleway/Raleway-ExtraBold.ttf");
+}
+/*----------------------------------------------------*/
+
+body {
+	line-height: 1;
+	font-family: "Raleway";
+}
+.wrapper {
+	max-width: 1920px;
+	min-height: 100vh;
+	outline: 1px solid black;
+	overflow: hidden;
+	display: grid;
+	grid-template-columns: 100%;
+	grid-template-rows: auto 1fr auto;
+}
+
+.inner-container {
+	max-width: 1620px;
+	margin: 0 auto;
+	padding: 0 20px;
+}
+
+/*--------------HEADER--------------------------------------*/
+header {
+	width: 100%;
+	position: absolute;
+	outline: 1px solid green;
+	z-index: 10;
+	top: 0;
+	right: 0;
+	left: 0;
+	color: #FFFFFF;
+}
+.header-inner {
+	height: 140px;
+	outline: 1px solid red;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+}
+nav{
+	outline: 1px solid black;
+	/*display: flex;
+	justify-content: center;
+	align-items: center;*/
+	padding: 10px 40px;
+}
+nav:after{
+	content: "";
+	clear: both;
+	display: block;
+}
+nav a{
+	color: currentColor;
+	text-decoration: none;
+	font-family: 'Raleway';
+	font-style: normal;
+	font-weight: 600;
+	font-size: 16px;
+	line-height: 20px;
+	outline: 1px solid black;
+	height: 40px;
+	padding: 10px;
+	box-sizing: border-box;
+	margin: 0 22px;
+	position: relative;
+	letter-spacing: 0.01em;
+	float: left;
+}
+nav a:after {
+	content:"";
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	height: 1px;
+	background: transparent;
+}
+nav a.current:after,
+nav a:hover:after{
+	background: currentColor;
+}
+nav a.current{
+	font-weight: 800;
+}
+.burger-icon {
+	height: 40px;
+	width: 40px;
+	outline: 1px solid black;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	right: 0;
+	top: 50%;
+	margin: -20px 0 0;
+	/*top: calc(50% - 20px);*/ 
+}
+/*--------------MAIN--------------------------------------*/
+main {
+}
+.banner-container{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+}
+.banner-container img{
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+.banner-info{
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	
+}
+.banner-info .inner-container{
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+}
+.banner-title{
+	max-width: 1090px;
+	outline: 1px solid white;
+}
+h2{
+	font-family: "Playfair Display";
+	font-style: normal;
+	font-weight: 700;
+	font-size: 20px;
+	line-height: 27px;
+	letter-spacing: 0.01em;
+	text-transform: uppercase;
+	color: rgba(255, 255, 255, 0.85);
+}
+h1{
+	font-family: "Playfair Display";
+	font-style: normal;
+	font-weight: 700;
+	font-size: 144px;
+	line-height: 192px;
+	letter-spacing: 0.01em;
+	text-transform: uppercase;
+	color: #FFFFFF;
+}
+.container-scroll{
+	position: absolute;
+	width: 123px;
+	height: 37px;
+	right: 0;
+	bottom: 16.8%;
+	outline: 1px solid white;
+}
+.scroll{
+	font-family: "Raleway";
+	font-style: normal;
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 30px;
+	letter-spacing: 0.01em;
+	color: rgba(255, 255, 255, 0.7);
+}
+/*--------------FOOTER--------------------------------------*/
+footer {
+}
